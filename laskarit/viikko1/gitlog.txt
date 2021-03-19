@@ -1,0 +1,114 @@
+joxnatal@lx0-fuxi020:~/ot_viikko1/tiedostoja$ git log --stat | cat
+commit 57d3b72884a4983ea0bce227977806f64947842f
+Author: Natalie Johansson <mnrjohansson@gmail.com>
+Date:   Fri Mar 19 16:45:55 2021 +0200
+
+    uusi nimi ja poisto
+
+ tiedostoja/file2.txt                 | 0
+ tiedostoja/{file1.txt => file22.txt} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 9c77a3e0b293c3cbfb100b32a1f33a6ddb29149c
+Author: Natalie Johansson <mnrjohansson@gmail.com>
+Date:   Fri Mar 19 16:42:07 2021 +0200
+
+    file1,2,3 luotu
+
+ tiedostoja/file1.txt | 0
+ tiedostoja/file2.txt | 0
+ tiedostoja/file3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 3bbd3f5f91f96382b7d95d2765401ea9a0752191
+Author: Natalie Johansson <mnrjohansson@gmail.com>
+Date:   Fri Mar 19 16:23:39 2021 +0200
+
+    poisto ja lisäys
+
+ eka.txt    | 4 +++-
+ kolmas.txt | 3 ++-
+ 2 files changed, 5 insertions(+), 2 deletions(-)
+
+commit 27a97f28b55d1105e3d3639ccc29e3695d2fcccd
+Author: Natalie Johansson <mnrjohansson@gmail.com>
+Date:   Fri Mar 19 16:17:04 2021 +0200
+
+    uusi nimi, poisto
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit e069a918bcf3e5b585984bd7399fb846bb038a8a
+Author: Natalie Johansson <mnrjohansson@gmail.com>
+Date:   Fri Mar 19 16:14:24 2021 +0200
+
+    poisto
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 852baec991f2cef53d8e7498c3257dfd4e9ad312
+Author: Natalie Johansson <mnrjohansson@gmail.com>
+Date:   Fri Mar 19 16:10:26 2021 +0200
+
+    muutos
+
+ tiedosto.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit f12e162923fc4934ee6e58cdac387e3d36f55e60
+Author: Natalie Johansson <mnrjohansson@gmail.com>
+Date:   Fri Mar 19 16:07:32 2021 +0200
+
+    teksti lisätty
+
+ tiedosto.txt | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+commit 7f60dca63c61a54348163ea24277baa9205853b6
+Author: Natalie Johansson <mnrjohansson@gmail.com>
+Date:   Fri Mar 19 13:05:22 2021 +0200
+
+    stuff, kalevala luotu
+
+ stuff/kalevala.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 7d77f27aaf228888b21a7734339f4b4d301352b9
+Author: Natalie Johansson <mnrjohansson@gmail.com>
+Date:   Fri Mar 19 13:04:05 2021 +0200
+
+    muutos
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 03a94a703a7226c7ee1803de2a569c98e886b495
+Author: Natalie Johansson <mnrjohansson@gmail.com>
+Date:   Fri Mar 19 13:02:10 2021 +0200
+
+    kolmas luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 3f3d8be8044091c0e86ea7ee0a65517757d7ba3b
+Author: Natalie <mnrjohansson@gmail.com>
+Date:   Fri Mar 19 12:57:39 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 498c9654f5db289a38940b49609f3e56b0f10891
+Author: Natalie <mnrjohansson@gmail.com>
+Date:   Fri Mar 19 12:54:25 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
