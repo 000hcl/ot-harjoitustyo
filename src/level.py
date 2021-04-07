@@ -20,9 +20,9 @@ class Level:
     
     def createCards(self):
         #INCOMPLETE
-
+        max_num = self.height*self.width//2 + 1
         nums = []
-        for num in range(1,11):
+        for num in range(1,max_num):
             nums.append(num)
             nums.append(num)
         random.shuffle(nums)
@@ -98,7 +98,6 @@ class Level:
                         self.flipOrDeletePair()
                         card.flip()
                         self.checkIfMatching(card)
-                        print(self.pairs)
             if self.gameEnded():
                 exit()
             
