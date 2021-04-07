@@ -6,3 +6,4 @@
 |  | 30 min | poetryn set up, tiedostojen luonti |
 | 27.3 | 4 h | pelin perustoiminta |
 |  | 15 min | korttien piirtäminen |
+| 7.4 | 1 h | uudelleen järjestely |
