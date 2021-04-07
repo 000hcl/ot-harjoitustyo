@@ -22,7 +22,7 @@ class Level:
         #INCOMPLETE
 
         nums = []
-        for num in range(1,self.width+1):
+        for num in range(1,11):
             nums.append(num)
             nums.append(num)
         random.shuffle(nums)
@@ -102,6 +102,7 @@ class Level:
             if self.gameEnded():
                 exit()
             
+
             
             window.fill((190,200,200))
             self.renderCards()
@@ -109,7 +110,7 @@ class Level:
             clock.tick(60)
 
 if __name__ == "__main__":
-    Level(2,5)
+    Level(4,5)
     
 
 

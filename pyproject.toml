@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "src"
+name = "ot-harjoitustyo"
 version = "0.1.0"
 description = ""
 authors = ["Natalie Johansson <mnrjohansson@gmail.com>"]
@@ -7,10 +7,10 @@ authors = ["Natalie Johansson <mnrjohansson@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 pygame = "^2.0.1"
-unittest = "^0.0"
+invoke = "^1.5.0"
 
 [tool.poetry.dev-dependencies]
-pytest = "^6.2.2"
+pytest = "^6.2.3"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
