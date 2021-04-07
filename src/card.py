@@ -24,10 +24,10 @@ class Card:
             self.shown = True
         self.getCard()
     
-    def getPos(self):
+    def get_pos(self):
         return (self.x,self.y)
     
-    def getCard(self):
+    def get_card(self):
         return self.img
 
          
