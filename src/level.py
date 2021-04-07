@@ -38,7 +38,7 @@ class Level:
     
     def render_cards(self):
         for card in self.deck:
-            window.blit(card.getCard(),card.getPos())
+            window.blit(card.get_card(),card.get_pos())
 
     def find_clicked_card(self, x: int, y: int):
         for card in self.deck:

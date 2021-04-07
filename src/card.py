@@ -22,7 +22,7 @@ class Card:
         else:
             self.img = self.face
             self.shown = True
-        self.getCard()
+        self.get_card()
     
     def get_pos(self):
         return (self.x,self.y)
