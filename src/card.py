@@ -4,7 +4,7 @@ import os
 dirname = os.path.dirname(__file__)
 
 class Card:
-    def __init__(self, nr: int, x: int=0, y: int=0):
+    def __init__(self, nr, x, y):
         self.face = pygame.image.load(os.path.join(dirname,"assets","card_"+str(nr)+".png"))
         self.back = pygame.image.load(os.path.join(dirname,"assets","card_back.png"))
         self.img = self.back

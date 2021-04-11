@@ -11,7 +11,7 @@ window = pygame.display.set_mode((1000,800))
 #TODO: refactor this
 
 class Level:
-    def __init__(self, height: int, width: int):
+    def __init__(self, height, width):
         self.height = height
         self.width = width
         self.deck = self.create_cards()
@@ -42,7 +42,7 @@ class Level:
         for card in self.deck:
             window.blit(card.get_card(),card.get_pos())
 
-    def find_clicked_card(self, x: int, y: int):
+    def find_clicked_card(self, x, y):
         for card in self.deck:
             c_x1 = card.x
             c_x2 = card.x2
@@ -63,7 +63,7 @@ class Level:
                 self.deck.remove(self.secondCard)
                 self.reset_pair()
     
-    def check_if_matching(self, card: Card):
+    def check_if_matching(self, card):
         
         
         if self.firstCard == None:

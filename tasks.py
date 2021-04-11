@@ -2,10 +2,10 @@ from invoke import task
 
 @task
 def start(ctx):
-    ctx.run("python3 src/main.py")
+    ctx.run("python src/main.py")
 @task
 def test(ctx):
-    ctx.run("python3 -m pytest src")
+    ctx.run("python -m pytest src")
 
 @task
 def coverage(ctx):
