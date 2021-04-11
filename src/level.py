@@ -8,6 +8,8 @@ clock = pygame.time.Clock()
 
 window = pygame.display.set_mode((1000,800))
 
+#TODO: refactor this
+
 class Level:
     def __init__(self, height: int, width: int):
         self.height = height
