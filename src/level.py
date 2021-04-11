@@ -18,7 +18,7 @@ class Level:
         self.firstCard = None
         self.secondCard = None
         self.pairs = 0
-        self.loop()
+        #self.loop()
     
     def create_cards(self):
         #INCOMPLETE
@@ -77,6 +77,9 @@ class Level:
             if self.firstCard.nr == self.secondCard.nr:
                 self.pairs += 1
     
+    def exit(self):
+        exit()
+
     def reset_pair(self):
         self.firstCard = None
         self.secondCard = None

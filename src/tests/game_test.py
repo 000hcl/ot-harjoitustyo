@@ -10,4 +10,4 @@ class TestLevel(unittest.TestCase):
         self.assertFalse(level2.deck == self.level.deck)
     
     def test_the_right_amount_of_cards_is_in_deck_when_deck_is_created(self):
-        self.assertEqual(len(self.level.deck),16)
+        self.assertEqual(len(self.level.deck),8)
