@@ -13,3 +13,4 @@
 | 16.4 | 2 h | refaktorointi |
 | | 1 h | pylint juttuja |
 | | 30 min | coverage korjauksia |
+| | 45 min | luokkien suunnittelu, koodaus |
