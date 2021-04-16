@@ -10,3 +10,6 @@
 | 11.4 | 4 h | yritys saada tasks toimimaan |
 | 12.4 | 4 h | yritys korjata virtuaalityöasemalla ilmestyviä virheitä |
 | 13.4 | 1 h | virheet korjattu |
+| 16.4 | 2 h | refaktorointi |
+| | 1 h | pylint juttuja |
+| | 30 min | coverage korjauksia |
