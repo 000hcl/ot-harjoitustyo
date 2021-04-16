@@ -1,49 +1,21 @@
-import pygame
-from card import Card
-import random
-
-pygame.init()
-
-clock = pygame.time.Clock()
-
-window = pygame.display.set_mode((1000,800))
-
-#TODO: refactor this
+from deck import Deck
 
 class Level:
-    def __init__(self, height, width):
-        self.height = height
-        self.width = width
-        self.deck = self.create_cards()
-        self.firstCard = None
-        self.secondCard = None
-        self.pairs = 0
-        #self.loop()
-    
-    def create_cards(self):
-        #INCOMPLETE
-        max_num = self.height*self.width//2 + 1
-        nums = []
-        for num in range(1,max_num):
-            nums.append(num)
-            nums.append(num)
-        random.shuffle(nums)
-        deck = []
+    def __init__(self, mode):
+        self.__deck = Deck(mode).deck
+        self.__first_card = None
+        self.__second_card = None
+        self.__pairs = 0
 
-        counter = 0
-        for i in range(self.width):
-            for j in range(self.height):
-                deck.append(Card(nums[counter],100+100*i,100+120*j))
-                counter += 1
+    @property
+    def deck(self):
+        return self.__deck
 
-        return deck
-    
-    def render_cards(self):
-        for card in self.deck:
-            window.blit(card.get_card(),card.get_pos())
-
-    def find_clicked_card(self, x, y):
-        for card in self.deck:
+    def __find_clicked_card(self, x, y):
+        """If a mouse button was clicked, find the card that collides
+        with the position of the mouse.
+        If no card is found, return None"""
+        for card in self.__deck:
             c_x1 = card.x
             c_x2 = card.x2
             c_y = card.y
@@ -51,70 +23,62 @@ class Level:
             if x >= c_x1 and x<=c_x2 and y>=c_y and y<=c_y2:
                 return card
         return None
-    
-    def flip_or_delete_pair(self):
-        if self.firstCard != None and self.secondCard != None:
-            if self.firstCard.nr != self.secondCard.nr:
-                self.firstCard.flip()
-                self.secondCard.flip()
-                self.reset_pair()
-            else:
-                self.deck.remove(self.firstCard)
-                self.deck.remove(self.secondCard)
-                self.reset_pair()
-    
-    def check_if_matching(self, card):
-        
-        
-        if self.firstCard == None:
-            self.firstCard = card
-        elif self.secondCard == None:
-            self.secondCard = card
-        else:
-            self.firstCard = card
-            self.secondCard = None
-        if self.firstCard != None and self.secondCard != None:
-            if self.firstCard.nr == self.secondCard.nr:
-                self.pairs += 1
-    
-    def exit(self):
-        exit()
 
-    def reset_pair(self):
-        self.firstCard = None
-        self.secondCard = None
-            
+    def __flip_or_delete_pair(self):
+        """ flip the card that was clicked, if two cards are
+        flipped, then remove them.
+        """
+        if self.__first_card is not None and self.__second_card is not None:
+            if self.__first_card.nr is not self.__second_card.nr:
+                self.__first_card.flip()
+                self.__second_card.flip()
+                self.__reset_pair()
+            else:
+                self.__deck.remove(self.__first_card)
+                self.__deck.remove(self.__second_card)
+                self.__reset_pair()
+
+    def __check_if_matching(self, card):
+        """
+        checks if the flipped cards are matching
+        """
+        #REDO THIS
+        if self.__first_card is None:
+            self.__first_card = card
+        elif self.__second_card is None:
+            self.__second_card = card
+        else:
+            self.__first_card = card
+            self.__second_card = None
+        if self.__first_card is not None and self.__second_card is not None:
+            if self.__first_card.nr == self.__second_card.nr:
+                self.__pairs += 1
+
+    def __reset_pair(self):
+        """
+        Resets the two flipped cards that
+        were memorized.
+        """
+        self.__first_card = None
+        self.__second_card = None
+
     def game_ended(self):
+        """
+        Checks if all pairs have been found.
+        """
         end = True
-        for card in self.deck:
-            if card.shown == False:
+        for card in self.__deck:
+            if card.shown is False:
                 end = False
         return end
 
-    def loop(self):
-        while True:
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    exit()
-                if event.type == pygame.MOUSEBUTTONDOWN:
-                    mousePos = pygame.mouse.get_pos()
-                    card = self.find_clicked_card(mousePos[0],mousePos[1])
-                    if card != None and card.shown == False:
-                        self.flip_or_delete_pair()
-                        card.flip()
-                        self.check_if_matching(card)
-            if self.game_ended():
-                exit()
-            
-
-            
-            window.fill((190,200,200))
-            self.render_cards()
-            pygame.display.flip()
-            clock.tick(60)
-
-if __name__ == "__main__":
-    Level(4,5)
-    
-
-
+    def click_event(self,mouse_pos):
+        """
+        if a mouse button was clicked,
+        do this
+        """
+        card = self.__find_clicked_card(mouse_pos[0],mouse_pos[1])
+        if card is not None and card.shown is False:
+            self.__flip_or_delete_pair()
+            card.flip()
+            self.__check_if_matching(card)

@@ -1,33 +1,55 @@
-import pygame
 import os
+import pygame
 
 dirname = os.path.dirname(__file__)
 
 class Card:
     def __init__(self, nr, x, y):
-        self.face = pygame.image.load(os.path.join(dirname,"assets","card_"+str(nr)+".png"))
-        self.back = pygame.image.load(os.path.join(dirname,"assets","card_back.png"))
-        self.img = self.back
-        self.shown = False
-        self.x = x
-        self.y = y
-        self.x2 = x+80
-        self.y2 = y+100
-        self.nr = nr
-    
+        self.__face = pygame.image.load(os.path.join(dirname,"assets","card_"+str(nr)+".png"))
+        self.__back = pygame.image.load(os.path.join(dirname,"assets","card_back.png"))
+        self.__img = self.__back
+        self.__shown = False
+        self.__x = x
+        self.__y = y
+        self.__x2 = x+80
+        self.__y2 = y+100
+        self.__nr = nr
+
     def flip(self):
         if self.shown:
-            self.img = self.back
-            self.shown = False
+            self.__img = self.__back
+            self.__shown = False
         else:
-            self.img = self.face
-            self.shown = True
+            self.__img = self.__face
+            self.__shown = True
         self.get_card()
-    
-    def get_pos(self):
-        return (self.x,self.y)
-    
-    def get_card(self):
-        return self.img
 
-         
+    @property
+    def nr(self):
+        return self.__nr
+
+    @property
+    def shown(self):
+        return self.__shown
+
+    @property
+    def x(self):
+        return self.__x
+
+    @property
+    def x2(self):
+        return self.__x2
+
+    @property
+    def y(self):
+        return self.__y
+
+    @property
+    def y2(self):
+        return self.__y2
+
+    def get_pos(self):
+        return (self.__x,self.__y)
+
+    def get_card(self):
+        return self.__img

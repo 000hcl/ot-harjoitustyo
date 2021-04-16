@@ -1,5 +1,6 @@
-from level import Level
+from gameloop import GameLoop
 
 if __name__ == "__main__":
-    Level(2,4).loop()
+    gl=GameLoop(1)
+    gl.loop()
     
