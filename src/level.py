@@ -40,7 +40,8 @@ class Level:
 
     def __check_if_matching(self, card):
         """
-        checks if the flipped cards are matching
+        checks if the clicked card matches the other
+        one, if it is flipped
         """
         #REDO THIS
         if self.__first_card is None:
