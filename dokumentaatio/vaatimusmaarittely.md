@@ -10,5 +10,5 @@ vähemmän pisteitä saa.
 
 - Pisteet voidaan tallentaa tulostauluun.
 - Tulosatulua voidaan katsella.
-- On mahdollista valita itselleen sopiva vaikeustaso.
-- Suunnitellut vaikeustasot: helppo, keskivaikea, vaikea.
+- On mahdollista valita itselleen sopiva vaikeustaso. (tehty)
+- Suunnitellut vaikeustasot: helppo, keskivaikea, vaikea. (tehty)
