@@ -14,3 +14,4 @@
 | | 1 h | pylint juttuja |
 | | 30 min | coverage korjauksia |
 | | 45 min | luokkien suunnittelu, koodaus |
+| 17.4 | 15 min | korttien, nappien piirtäminen |
