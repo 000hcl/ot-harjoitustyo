@@ -15,3 +15,4 @@
 | | 30 min | coverage korjauksia |
 | | 45 min | luokkien suunnittelu, koodaus |
 | 17.4 | 15 min | korttien, nappien piirtäminen |
+| | 4 h 30 min | valikkojen toteutus |
