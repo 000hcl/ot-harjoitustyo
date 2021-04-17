@@ -2,7 +2,7 @@ from gameloop import GameLoop
 from menu import Menu
 class Item:
     def __init__(self, item):
-        if item is 0:
+        if item == 0:
             item = Menu("main")
         self.loop = GameLoop(item)
 
