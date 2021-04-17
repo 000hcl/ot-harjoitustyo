@@ -12,7 +12,7 @@ class Deck:
             self.__height=4
             self.__width=5
         else:
-            #hard mode, implement later
+            #hard mode
             self.__height = 5
             self.__width=6
 

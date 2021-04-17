@@ -43,7 +43,6 @@ class Level:
         checks if the clicked card matches the other
         one, if it is flipped
         """
-        #REDO THIS
         if self.__first_card is None:
             self.__first_card = card
         elif self.__second_card is None:

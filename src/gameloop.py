@@ -1,24 +1,28 @@
 import pygame
-from level import Level
 from renderer import Renderer
 from clock import Clock
 from eventhandler import EventHandler
 
 class GameLoop:
-    def __init__(self,mode):
-        self.level=Level(mode)
-        self.window = pygame.display.set_mode((1000,800))
+    def __init__(self, system):
+        self.system = system
+        self.window = pygame.display.set_mode((1000, 800))
         self.clock = Clock()
-        self.renderer = Renderer(self.window,self.level)
-        self.event_handler=EventHandler(self.level)
+        self.renderer = Renderer(self.window, self.system)
+        self.event_handler = EventHandler(self.system)
 
     def loop(self):
         while True:
-            if self.event_handler.handle_events() == False:
+            event = self.event_handler.handle_events()
+            if event is False:
                 exit()
+            if event is not None:
+                return event
             self.renderer.render()
             self.clock.tick()
 
-if __name__=="__main__":
-    gl=GameLoop(1)
-    gl.loop()
+    def action(self, action):
+        if action is None:
+            exit()
+        else:
+            pass

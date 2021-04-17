@@ -1,6 +1,5 @@
-from gameloop import GameLoop
-
+from item import Item
 if __name__ == "__main__":
-    gl=GameLoop(1)
-    gl.loop()
-    
+
+    main_menu = Item(0).next()
+
