@@ -11,8 +11,6 @@ class Card:
         self.__shown = False
         self.__x = x
         self.__y = y
-        self.__x2 = x+80
-        self.__y2 = y+100
         self.__nr = nr
 
     def flip(self):
@@ -38,7 +36,7 @@ class Card:
 
     @property
     def x2(self):
-        return self.__x2
+        return self.__x + 80
 
     @property
     def y(self):
@@ -46,7 +44,7 @@ class Card:
 
     @property
     def y2(self):
-        return self.__y2
+        return self.__y + 100
 
     def get_pos(self):
         return (self.__x,self.__y)
