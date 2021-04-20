@@ -27,3 +27,9 @@ Coverage report:
 ```bash
 poetry run invoke coverage-report
 ```
+---
+
+Lint:
+```bash
+poetry run invoke lint
+```
