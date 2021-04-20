@@ -1,5 +1,5 @@
-from gameloop import GameLoop
-from menu import Menu
+from .gameloop import GameLoop
+from .menu import Menu
 class Item:
     def __init__(self, item):
         if item == 0:

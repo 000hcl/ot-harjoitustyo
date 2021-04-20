@@ -1,4 +1,4 @@
-from button import Button
+from .button import Button
 from level import Level
 
 class Menu:

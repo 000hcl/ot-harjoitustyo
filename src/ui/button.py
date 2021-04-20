@@ -1,5 +1,3 @@
-import sys
-print(sys.path)
 import pygame
 import os
 
@@ -7,8 +5,8 @@ dirname = os.path.dirname(__file__)
 
 class Button:
     def __init__(self, button_type, action, x,y):
-        self.__img = pygame.image.load(os.path.join(dirname,"assets", button_type +".png"))
-        self.__img_selected = pygame.image.load(os.path.join(dirname,"assets", button_type +"_selected.png"))
+        self.__img = pygame.image.load(os.path.join(dirname,"..","assets", button_type +".png"))
+        self.__img_selected = pygame.image.load(os.path.join(dirname,'..',"assets", button_type +"_selected.png"))
         self.__state = self.__img
         self.__action = action
         self.__x=x

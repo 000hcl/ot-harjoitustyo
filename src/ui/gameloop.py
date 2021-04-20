@@ -1,7 +1,7 @@
 import pygame
-from renderer import Renderer
-from clock import Clock
-from eventhandler import EventHandler
+from .renderer import Renderer
+from .clock import Clock
+from .eventhandler import EventHandler
 
 class GameLoop:
     def __init__(self, system):
