@@ -1,5 +1,7 @@
 ## tuntikirjanpito
 
+Tunnit: 26 h 25 min
+
 | päivä | aika | mitä? |
 | :----:|:-----| :-----|
 | 25.3 | 40 min | korttien, nappien piirtäminen |
@@ -18,3 +20,4 @@
 | | 4 h 30 min | valikkojen toteutus |
 | 19.4 | 1h | (epäonnistunut) yritys laittaa tiedostoja ui kansioon |
 | 20.4 | 2h | ui kansio, testaus virtuaalityöasemassa |
+| 23.4 | 1 h | piste-systeemi |
