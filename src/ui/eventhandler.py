@@ -27,4 +27,5 @@ class EventHandler:
                     return action
             if self.__mode == 1:
                 if self.__system.game_ended():
+                    self.__system.ending_event()
                     return 0

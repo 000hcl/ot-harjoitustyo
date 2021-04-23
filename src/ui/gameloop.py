@@ -1,12 +1,11 @@
-import pygame
 from .renderer import Renderer
 from .clock import Clock
 from .eventhandler import EventHandler
 
 class GameLoop:
-    def __init__(self, system):
+    def __init__(self, system,window):
         self.system = system
-        self.window = pygame.display.set_mode((1000, 800))
+        self.window = window
         self.clock = Clock()
         self.renderer = Renderer(self.window, self.system)
         self.event_handler = EventHandler(self.system)

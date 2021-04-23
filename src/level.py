@@ -1,4 +1,5 @@
 from deck import Deck
+from points import Points
 
 class Level:
     def __init__(self, mode):
@@ -6,6 +7,7 @@ class Level:
         self.__first_card = None
         self.__second_card = None
         self.__pairs = 0
+        self.__points = Points(mode)
 
     @property
     def deck(self):
@@ -43,6 +45,7 @@ class Level:
         checks if the clicked card matches the other
         one, if it is flipped
         """
+
         if self.__first_card is None:
             self.__first_card = card
         elif self.__second_card is None:
@@ -71,6 +74,12 @@ class Level:
             if card.shown is False:
                 end = False
         return end
+    def increase_points(self):
+        self.__points.update()
+
+    def ending_event(self):
+        self.__points.end()
+        print(self.__points.result)
 
     def click_event(self,mouse_pos):
         """
@@ -82,3 +91,4 @@ class Level:
             self.__flip_or_delete_pair()
             card.flip()
             self.__check_if_matching(card)
+            self.increase_points()
