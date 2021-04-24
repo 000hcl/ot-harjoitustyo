@@ -27,8 +27,11 @@ class Level:
         return None
 
     def __flip_or_delete_pair(self):
-        """ flip the card that was clicked, if two cards are
-        flipped, then remove them.
+        """
+        if two cards are flipped, check if they are a pair.
+        If they are not a pair, flip both of them over.
+        If they are a pair, remove them from the deck.
+        In both cases, call reset_pair().
         """
         if self.__first_card is not None and self.__second_card is not None:
             if self.__first_card.nr is not self.__second_card.nr:
