@@ -5,6 +5,8 @@
 
 [tuntikirjanpito](https://github.com/000hcl/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
+[arkkitehtuuri](https://github.com/000hcl/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
 
 ## Kuinka testata/käynnistää ohjelma:
 
