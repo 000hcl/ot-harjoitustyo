@@ -28,4 +28,5 @@ class EventHandler:
             if self.__mode == 1:
                 if self.__system.game_ended():
                     self.__system.ending_event()
-                    return 0
+                    result = "Latest result: " + str(self.__system.result())
+                    return (3, result)

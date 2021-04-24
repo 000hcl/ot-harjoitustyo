@@ -2,14 +2,15 @@ from .button import Button
 from level import Level
 
 class Menu:
-    def __init__(self,mode):
+    def __init__(self, mode, text=" "):
         self.__buttons = []
+        self.__text = ""
         if mode == "main":
-            self.__create_main_menu()
+            self.__create_main_menu(text)
         if mode == "difficulty":
             self.__create_difficulty_menu()
 
-    def __create_main_menu(self):
+    def __create_main_menu(self, text=" "):
         #Leaderboard coming soon
         start = Button("play", "difficulty", 10, 0)
         leaderboard = Button("leaderboard", None, 10, 150)
@@ -17,6 +18,15 @@ class Menu:
         self.__add_button(start)
         #self.__add_button(leaderboard)
         self.__add_button(exit_button)
+        self.__set_text(text)
+
+    def __set_text(self, text):
+        self.__text = text
+
+    @property
+    def text(self):
+        return self.__text
+
 
     def __create_difficulty_menu(self):
         easy = Button("easy", 1, 10, 0)

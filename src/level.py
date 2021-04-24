@@ -1,5 +1,5 @@
 from deck import Deck
-from points import Points
+from points_system.points import Points
 
 class Level:
     def __init__(self, mode):
@@ -79,7 +79,9 @@ class Level:
 
     def ending_event(self):
         self.__points.end()
-        print(self.__points.result)
+
+    def result(self):
+        return self.__points.result
 
     def click_event(self,mouse_pos):
         """

@@ -1,5 +1,5 @@
-from timer import Timer
-from counter import Counter
+from .timer import Timer
+from .counter import Counter
 
 class Points:
     def __init__(self, mode):
