@@ -1,6 +1,6 @@
 ## tuntikirjanpito
 
-Tunnit: 27 h 55 min
+Tunnit: 28 h 55 min
 
 | päivä | aika | mitä? |
 | :----:|:-----| :-----|
