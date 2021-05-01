@@ -2,7 +2,23 @@ from .deck import Deck
 from ..points_system.points import Points
 
 class Level:
+    """
+    Represents a game level or a set of cards laid out.
+
+    Attributes:
+        deck: The deck used in the game.
+        first_card: The first card flipped over when finding a new pair.
+        second_card: The second card flipped over when finding a new pair.
+        pairs: The number of pairs made.
+        points: The point calculating system.
+    """
     def __init__(self, mode):
+        """
+        Constructor which starts a new game.
+
+        Args:
+            mode: Determines the difficulty of the game.
+        """
         self.__deck = Deck(mode).deck
         self.__first_card = None
         self.__second_card = None
@@ -11,12 +27,19 @@ class Level:
 
     @property
     def deck(self):
+        """
+        Returns the deck.
+        """
         return self.__deck
 
     def __find_clicked_card(self, x, y):
         """If a mouse button was clicked, find the card that collides
         with the position of the mouse.
-        If no card is found, return None"""
+
+        Returns:
+            The clicked card.
+            If no card was clicked, returns None.
+        """
         for card in self.__deck:
             c_x1 = card.x
             c_x_2 = card.x_2
@@ -28,10 +51,10 @@ class Level:
 
     def __flip_or_delete_pair(self):
         """
-        if two cards are flipped, check if they are a pair.
+        if two cards have visible faces, check if they are a pair.
         If they are not a pair, flip both of them over.
         If they are a pair, remove them from the deck.
-        In both cases, call reset_pair().
+        In both cases, reset the memorized pair of cards (reset_pair()).
         """
         if self.__first_card is not None and self.__second_card is not None:
             if self.__first_card.number is not self.__second_card.number:
@@ -43,12 +66,10 @@ class Level:
                 self.__deck.remove(self.__second_card)
                 self.__reset_pair()
 
-    def __check_if_matching(self, card):
+    def __set_flipped_pair(self, card):
         """
-        checks if the clicked card matches the other
-        one, if it is flipped
+        Remembers a flipped card.
         """
-
         if self.__first_card is None:
             self.__first_card = card
         elif self.__second_card is None:
@@ -56,6 +77,12 @@ class Level:
         else:
             self.__first_card = card
             self.__second_card = None
+
+    def __check_if_matching(self):
+        """
+        checks if the memorized pair are a matching pair.
+        Increases the number of found pairs by one if they match.
+        """
         if self.__first_card is not None and self.__second_card is not None:
             if self.__first_card.number == self.__second_card.number:
                 self.__pairs += 1
@@ -77,23 +104,34 @@ class Level:
             if card.shown is False:
                 end = False
         return end
+
     def increase_points(self):
+        """
+        Updates the point calculator.
+        """
         self.__points.update()
 
     def ending_event(self):
+        """
+        What should be done if the game is over.
+        """
         self.__points.end()
 
     def result(self):
+        """
+        Returns the point result of the game.
+        """
         return self.__points.result
 
-    def click_event(self,mouse_pos):
+    def click_event(self, mouse_pos):
         """
-        if a mouse button was clicked,
-        do this
+        If a mouse button was clicked,
+        do this.
         """
         card = self.__find_clicked_card(mouse_pos[0],mouse_pos[1])
         if card is not None and card.shown is False:
             self.__flip_or_delete_pair()
             card.flip()
-            self.__check_if_matching(card)
+            self.__set_flipped_pair(card)
+            self.__check_if_matching()
             self.increase_points()
