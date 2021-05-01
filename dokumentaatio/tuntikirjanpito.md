@@ -1,6 +1,6 @@
 ## tuntikirjanpito
 
-Tunnit: 26 h 25 min
+Tunnit: 27 h 55 min
 
 | päivä | aika | mitä? |
 | :----:|:-----| :-----|
@@ -21,3 +21,4 @@ Tunnit: 26 h 25 min
 | 19.4 | 1h | (epäonnistunut) yritys laittaa tiedostoja ui kansioon |
 | 20.4 | 2h | ui kansio, testaus virtuaalityöasemassa |
 | 23.4 | 1 h | piste-systeemi |
+| 1.5 | 1h 30 min | lisää pakkauksia lisätty, lint |
