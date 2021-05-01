@@ -1,5 +1,5 @@
 from .button import Button
-from level import Level
+from ..game.level import Level
 
 class Menu:
     def __init__(self, mode, text=" "):

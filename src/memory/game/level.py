@@ -1,5 +1,5 @@
-from deck import Deck
-from points_system.points import Points
+from .deck import Deck
+from ..points_system.points import Points
 
 class Level:
     def __init__(self, mode):
@@ -19,10 +19,10 @@ class Level:
         If no card is found, return None"""
         for card in self.__deck:
             c_x1 = card.x
-            c_x2 = card.x2
+            c_x_2 = card.x_2
             c_y = card.y
-            c_y2 = card.y2
-            if x >= c_x1 and x<=c_x2 and y>=c_y and y<=c_y2:
+            c_y_2 = card.y_2
+            if x >= c_x1 and x<=c_x_2 and y>=c_y and y<=c_y_2:
                 return card
         return None
 
@@ -34,7 +34,7 @@ class Level:
         In both cases, call reset_pair().
         """
         if self.__first_card is not None and self.__second_card is not None:
-            if self.__first_card.nr is not self.__second_card.nr:
+            if self.__first_card.number is not self.__second_card.number:
                 self.__first_card.flip()
                 self.__second_card.flip()
                 self.__reset_pair()
@@ -57,7 +57,7 @@ class Level:
             self.__first_card = card
             self.__second_card = None
         if self.__first_card is not None and self.__second_card is not None:
-            if self.__first_card.nr == self.__second_card.nr:
+            if self.__first_card.number == self.__second_card.number:
                 self.__pairs += 1
 
     def __reset_pair(self):

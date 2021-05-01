@@ -1,10 +1,10 @@
 import unittest
-from points_system.timer import Timer
+from ..memory.points_system import timer as t
 
 class TestTimer(unittest.TestCase):
     def setUp(self):
-        self.timer = Timer()
-        self.timer_2 = Timer()
+        self.timer = t.Timer()
+        self.timer_2 = t.Timer()
 
     def test_timer_goes_forward(self):
         self.timer.end_timer()

@@ -1,17 +1,18 @@
 import os
 import pygame
 
-dirname = os.path.dirname(__file__)
+dir_name = os.path.dirname(__file__)
 
 class Card:
-    def __init__(self, nr, x, y):
-        self.__face = pygame.image.load(os.path.join(dirname,"assets","card_"+str(nr)+".png"))
-        self.__back = pygame.image.load(os.path.join(dirname,"assets","card_back.png"))
+    def __init__(self, number, x, y):
+        self.__face = pygame.image.load(os.path.join(dir_name, "..", "..",
+         "assets", "card_" + str(number) + ".png"))
+        self.__back = pygame.image.load(os.path.join(dir_name, "..", "..", "assets", "card_back.png"))
         self.__img = self.__back
         self.__shown = False
         self.__x = x
         self.__y = y
-        self.__nr = nr
+        self.__number = number
 
     def flip(self):
         if self.shown:
@@ -23,8 +24,8 @@ class Card:
         self.get_card()
 
     @property
-    def nr(self):
-        return self.__nr
+    def number(self):
+        return self.__number
 
     @property
     def shown(self):
@@ -35,7 +36,7 @@ class Card:
         return self.__x
 
     @property
-    def x2(self):
+    def x_2(self):
         return self.__x + 80
 
     @property
@@ -43,7 +44,7 @@ class Card:
         return self.__y
 
     @property
-    def y2(self):
+    def y_2(self):
         return self.__y + 100
 
     def get_pos(self):
