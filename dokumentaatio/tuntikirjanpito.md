@@ -22,3 +22,4 @@ Tunnit: 27 h 55 min
 | 20.4 | 2h | ui kansio, testaus virtuaalityöasemassa |
 | 23.4 | 1 h | piste-systeemi |
 | 1.5 | 1h 30 min | lisää pakkauksia lisätty, lint |
+| | 1h | docstring aloitettu |
