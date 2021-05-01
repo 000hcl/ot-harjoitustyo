@@ -1,6 +1,6 @@
 ## tuntikirjanpito
 
-Tunnit: 28 h 55 min
+Tunnit: 29 h 55 min
 
 | päivä | aika | mitä? |
 | :----:|:-----| :-----|
@@ -23,3 +23,4 @@ Tunnit: 28 h 55 min
 | 23.4 | 1 h | piste-systeemi |
 | 1.5 | 1h 30 min | lisää pakkauksia lisätty, lint |
 | | 1h | docstring aloitettu |
+| | 1h | tulostaulun toteutus (aloitus) |
