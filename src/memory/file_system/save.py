@@ -38,7 +38,10 @@ class Save:
     def __write_save_file(self, result):
         """
         Converts the current leaderboard into csv and
-        writes
+        rewrites the file.
+
+        Args:
+            result: The list to be written.
         """
         result = [str(x) for x in result]
         res_string = ",".join(result)
