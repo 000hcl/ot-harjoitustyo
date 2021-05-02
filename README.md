@@ -7,6 +7,7 @@
 
 [arkkitehtuuri](https://github.com/000hcl/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
+[käyttöohje](https://github.com/000hcl/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
 ## Kuinka testata/käynnistää ohjelma:
 
