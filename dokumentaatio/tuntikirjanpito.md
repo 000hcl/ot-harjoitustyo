@@ -1,6 +1,6 @@
 ## tuntikirjanpito
 
-Tunnit: 32 h 15 min
+Tunnit: 33 h 15 min
 
 | päivä | aika | mitä? |
 | :----:|:-----| :-----|
@@ -25,3 +25,4 @@ Tunnit: 32 h 15 min
 | | 1h | docstring aloitettu |
 | | 1h | tulostaulun toteutus (aloitus) |
 | 2.5 | 2h 20 min | Toimiva(?) tulostaulu |
+| | 1 h | Testejä |
