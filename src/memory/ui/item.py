@@ -9,7 +9,6 @@ class Item:
             if item == 0:
                 item = Menu("main")
             elif item[0] == 3:
-                print(item[1])
                 self.board.update(int(item[1]))
                 
                 item = Menu("main", item[1])
