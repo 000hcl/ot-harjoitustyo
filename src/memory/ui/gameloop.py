@@ -3,11 +3,11 @@ from .clock import Clock
 from .eventhandler import EventHandler
 
 class GameLoop:
-    def __init__(self, system, window):
+    def __init__(self, system, window, save):
         self.system = system
         self.window = window
         self.clock = Clock()
-        self.renderer = Renderer(self.window, self.system)
+        self.renderer = Renderer(self.window, self.system, save)
         self.event_handler = EventHandler(self.system)
 
     def loop(self):

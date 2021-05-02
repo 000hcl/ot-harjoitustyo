@@ -4,9 +4,9 @@ from ..game.level import Level
 class Menu:
     def __init__(self, mode, text=" "):
         self.__buttons = []
-        self.__text = ""
+        self.__text = text
         if mode == "main":
-            self.__create_main_menu(text)
+            self.__create_main_menu("Latest result: " + self.__text)
         if mode == "difficulty":
             self.__create_difficulty_menu()
 
