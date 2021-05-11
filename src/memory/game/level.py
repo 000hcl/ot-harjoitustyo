@@ -105,7 +105,7 @@ class Level:
                 end = False
         return end
 
-    def increase_points(self):
+    def __increase_points(self):
         """
         Updates the point calculator.
         """
@@ -134,4 +134,4 @@ class Level:
             card.flip()
             self.__set_flipped_pair(card)
             self.__check_if_matching()
-            self.increase_points()
+            self.__increase_points()
