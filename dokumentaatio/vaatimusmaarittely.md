@@ -8,7 +8,7 @@ vähemmän pisteitä saa.
 
 ## suunnitellut toiminnallisuudet
 
-- Pisteet voidaan tallentaa tulostauluun.
-- Tulosatulua voidaan katsella.
+- Pisteet voidaan tallentaa tulostauluun. (tehty)
+- Tulosatulua voidaan katsella. (tehty)
 - On mahdollista valita itselleen sopiva vaikeustaso. (tehty)
 - Suunnitellut vaikeustasot: helppo, keskivaikea, vaikea. (tehty)
