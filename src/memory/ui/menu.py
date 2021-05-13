@@ -11,12 +11,9 @@ class Menu:
             self.__create_difficulty_menu()
 
     def __create_main_menu(self, text=" "):
-        #Leaderboard coming soon
         start = Button("play", "difficulty", 10, 0)
-        leaderboard = Button("leaderboard", None, 10, 150)
         exit_button = Button("exit", None, 10, 300)
         self.__add_button(start)
-        #self.__add_button(leaderboard)
         self.__add_button(exit_button)
         self.__set_text(text)
 
@@ -47,7 +44,6 @@ class Menu:
         for button in self.__buttons:
             if button.mouse_is_colliding(mouse_pos):
                 action = button.action
-                #NEW
                 if isinstance(action,str):
                     return Menu(action)
                 if action is None:

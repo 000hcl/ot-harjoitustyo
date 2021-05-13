@@ -1,7 +1,6 @@
 import pygame
 
 
-#TODO: redo
 pygame.init()
 class Renderer:
     def __init__(self, window, system, save):
