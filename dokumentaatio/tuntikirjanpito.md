@@ -1,6 +1,6 @@
 ## tuntikirjanpito
 
-Tunnit: 33 h 45 min
+Tunnit: 34 h 5 min
 
 | päivä | aika | mitä? |
 | :----:|:-----| :-----|
@@ -27,3 +27,4 @@ Tunnit: 33 h 45 min
 | 2.5 | 2h 20 min | Toimiva(?) tulostaulu |
 | | 1 h | Testit |
 | 11.5 | 30 min | Testit |
+| 13.5 | 20 min | Testit |
