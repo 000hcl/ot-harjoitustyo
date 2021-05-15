@@ -36,6 +36,10 @@ class Level:
         """If a mouse button was clicked, find the card that collides
         with the position of the mouse.
 
+        Args:
+            x: The x-coordinate of the mouse.
+            y: The y-coordinate of the mouse.
+
         Returns:
             The clicked card.
             If no card was clicked, returns None.
@@ -127,6 +131,9 @@ class Level:
         """
         If a mouse button was clicked,
         do this.
+
+        Args:
+            mouse_pos: The coordinates of the mouse.
         """
         card = self.__find_clicked_card(mouse_pos[0],mouse_pos[1])
         if card is not None and card.shown is False:

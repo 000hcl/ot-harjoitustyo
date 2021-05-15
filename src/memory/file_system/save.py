@@ -1,5 +1,18 @@
 class Save:
+    """
+    The save file, which in this case is the leaderboard.
+
+    Attributes:
+        file: The file to read from.
+        result: The contents of the file.
+    """
     def __init__(self, file):
+        """
+        Constructor for the Save object.
+
+        Args:
+            file: The file to be read from.
+        """
         self.__file = file
         self.__result = self.load()
 
@@ -50,6 +63,12 @@ class Save:
 
 
     def __read_file(self):
+        """
+        Reads the file.
+
+        Returns:
+            The contents of the file in list form.
+        """
         with open(self.__file) as file:
             content = file.read()
         result = content.split(",")
@@ -58,6 +77,13 @@ class Save:
 
 
     def __file_is_valid(self):
+        """
+        Checks the validity of the file.
+
+        Returns:
+            True if it seems valid, otherwise
+            False.
+        """
         try:
             result = self.__read_file()
             if len(result) != 10:
@@ -75,9 +101,16 @@ class Save:
         return True
 
     def __create_new_save_file(self):
+        """
+        Creates an empty leaderboard and writes
+        it in the file.
+        """
         new = [0 for x in range(10)]
         self.__write_save_file(new)
 
     @property
     def result(self):
+        """
+        Returns the current loaded leaderboard.
+        """
         return self.__result

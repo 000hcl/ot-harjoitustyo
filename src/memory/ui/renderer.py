@@ -3,7 +3,27 @@ import pygame
 
 pygame.init()
 class Renderer:
+    """
+    Renders all necessary images in each situation.
+
+    Attributes:
+        save: The leaderboard.
+        window: The window to be used.
+        system: A level or menu to be rendered.
+        mode: Determines if a level is to be rendered
+            or a menu.
+        font: Font for text to be rendered.
+        colour: The colour for the text.
+    """
     def __init__(self, window, system, save):
+        """
+        Constructor that creates a new renderer.
+
+        Args:
+            window: The window to be used.
+            system: Level or menu to be rendered.
+            save: The leaderboard.
+        """
         self.__save = save
         self.__window = window
         self.__system = system
@@ -11,7 +31,7 @@ class Renderer:
         self.__font = pygame.font.SysFont("arial", 30)
         self.__colour = (255, 255, 255)
 
-        if system.__class__.__name__ == "Level":
+        if system.__class__.__name__ == "LevelService":
             self.__mode = 1
         if system.__class__.__name__ == "Menu":
             self.__mode = 2
@@ -28,7 +48,7 @@ class Renderer:
         self.__window.blit(text, (400, 20))
 
     def __blit_deck(self):
-        deck = self.__system.deck
+        deck = self.__system.deck()
         for card in deck:
             self.__window.blit(card.get_card(), card.get_pos())
 
@@ -50,6 +70,9 @@ class Renderer:
         pygame.display.flip()
 
     def render(self):
+        """
+        Renders a level or a menu.
+        """
         if self.__mode == 1:
             self.__render_level()
         if self.__mode == 2:

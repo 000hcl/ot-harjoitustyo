@@ -1,8 +1,22 @@
 from .button import Button
-from ..game.level import Level
+from .level_service import LevelService
 
 class Menu:
+    """
+    Represents a menu.
+
+    Attributes:
+        buttons: A list of buttons for the menu.
+        text: Text to be displayed alongside the menu.
+    """
     def __init__(self, mode, text=" "):
+        """
+        Constructs a new Menu object.
+
+        Args:
+            mode: Determines what kind of menu to create.
+            text: The text to display alongside the menu.
+        """
         self.__buttons = []
         self.__text = text
         if mode == "main":
@@ -37,10 +51,24 @@ class Menu:
         self.__buttons.append(button)
 
     def movement_event(self, mouse_pos):
+        """
+        Actions to be taken when mouse movement
+        has been detected.
+
+        Args:
+            mouse_pos: Current coordinates of the mouse.
+        """
         for button in self.__buttons:
             button.movement_event(mouse_pos)
 
     def click_event(self, mouse_pos):
+        """
+        Actions to take when a mouse click
+        has been detected.
+
+        Args:
+            mouse_pos: Coordinates of the mouse.
+        """
         for button in self.__buttons:
             if button.mouse_is_colliding(mouse_pos):
                 action = button.action
@@ -48,7 +76,10 @@ class Menu:
                     return Menu(action)
                 if action is None:
                     exit()
-                return Level(action)
+                return LevelService(action)
 
     def buttons(self):
+        """
+        Returns buttons.
+        """
         return self.__buttons

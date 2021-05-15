@@ -3,7 +3,25 @@ from .clock import Clock
 from .eventhandler import EventHandler
 
 class GameLoop:
+    """
+    The pygame loop.
+
+    Attributes:
+        system: A LevelService or Menu object.
+        window: The window to be used.
+        clock: Pygame clock.
+        renderer: Renderer object that renders images.
+        event_handler: EventHandler object.
+    """
     def __init__(self, system, window, save):
+        """
+        Constructs a new GameLoop object.
+
+        Args:
+            system: A LevelService or Menu object.
+            window: The window to be used.
+            save: The leaderboard.
+        """
         self.system = system
         self.window = window
         self.clock = Clock()
@@ -11,6 +29,9 @@ class GameLoop:
         self.event_handler = EventHandler(self.system)
 
     def loop(self):
+        """
+        The pygame loop itself.
+        """
         while True:
             event = self.event_handler.handle_events()
             if event is False:
@@ -19,9 +40,3 @@ class GameLoop:
                 return event
             self.renderer.render()
             self.clock.tick()
-
-    def action(self, action):
-        if action is None:
-            exit()
-        else:
-            pass
