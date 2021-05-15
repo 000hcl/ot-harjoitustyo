@@ -1,6 +1,6 @@
 ## tuntikirjanpito
 
-Tunnit: 34 h 5 min
+Tunnit: 36 h 50 min
 
 | päivä | aika | mitä? |
 | :----:|:-----| :-----|
@@ -28,3 +28,5 @@ Tunnit: 34 h 5 min
 | | 1 h | Testit |
 | 11.5 | 30 min | Testit |
 | 13.5 | 20 min | Testit |
+| 15.5 | 20 min | LevelService luokka |
+| | 2h 25 min | Docstring |
