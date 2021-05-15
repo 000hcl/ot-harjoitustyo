@@ -1,5 +1,5 @@
 import unittest
-from ..memory.game.card import Card
+from src.memory.game.card import Card
 
 class TestCard(unittest.TestCase):
     def setUp(self):

@@ -1,5 +1,5 @@
 import unittest
-from ..memory.game.deck import Deck
+from src.memory.game.deck import Deck
 
 class TestDeck(unittest.TestCase):
     def setUp(self):

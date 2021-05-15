@@ -1,5 +1,5 @@
 import unittest
-from ..memory.game.level import Level
+from src.memory.game.level import Level
 
 class TestDeck(unittest.TestCase):
     def setUp(self):

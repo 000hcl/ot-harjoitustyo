@@ -1,5 +1,5 @@
 import unittest
-from ..memory.points_system import timer as t
+from src.memory.points_system import timer as t
 
 class TestTimer(unittest.TestCase):
     def setUp(self):

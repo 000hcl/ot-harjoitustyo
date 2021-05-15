@@ -1,5 +1,5 @@
 import unittest
-from ..memory.points_system.points import Points
+from src.memory.points_system.points import Points
 
 class TestPoints(unittest.TestCase):
     def setUp(self):

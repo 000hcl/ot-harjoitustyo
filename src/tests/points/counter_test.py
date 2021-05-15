@@ -1,5 +1,5 @@
 import unittest
-from ..memory.points_system.counter import Counter
+from src.memory.points_system.counter import Counter
 
 class TestCounter(unittest.TestCase):
     def setUp(self):
