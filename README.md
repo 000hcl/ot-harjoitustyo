@@ -11,6 +11,19 @@
 
 [testidokumentti](https://github.com/000hcl/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)
 
+## Asentaminen:
+
+Tarvitset:
+
+- pythonin versio 3.6 (tai uudempi)
+- poetry
+
+1. [Lataa viimeisin release](https://github.com/000hcl/ot-harjoitustyo/releases/tag/loppupalautus)
+2. Pura zip haluamaasi paikkaan.
+3. siirry komentorivillä purattuun kansioon.
+4. Käynnistä ohjelma seuraamalla seuraavat ohjeet:
+
+
 ## Kuinka testata/käynnistää ohjelma:
 
 1. Riippuvuudet, suorita:
