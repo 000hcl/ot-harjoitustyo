@@ -9,6 +9,8 @@
 
 [käyttöohje](https://github.com/000hcl/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
+[testidokumentti](https://github.com/000hcl/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)
+
 ## Kuinka testata/käynnistää ohjelma:
 
 1. Riippuvuudet, suorita:
