@@ -17,7 +17,7 @@ Level-luokan testit jotka testaavat pisteiden laskua eivät aina mene läpi jos 
 
 ### Testauskattavuus
 
-Haarautumiskattavuus on 91%.
+Haarautumiskattavuus on 93%.
 
 ![covreport](./kuvat/covrep.png)
 
