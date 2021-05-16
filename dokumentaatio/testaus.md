@@ -12,6 +12,8 @@ Tulostaulun testit luovat tiedostoja jotka vastaavat kelvollisia ja epäkelvolli
 
 Pelin logiikka tapahtuu Level-luokassa. Sille ei ole tehty testejä missä peli pelataan loppuun, koska en ole vielä keksinyt järkevää tapaa toteuttaa sellaista testiä.
 
+Level-luokan testit jotka testaavat pisteiden laskua eivät aina mene läpi jos kone on liian hidas. Esimerkiksi on olemassa seuraava tapaus: Testi jonka tarkoitus on huomioida vain klikkauksien pistevähennykset ei mene läpi koska ajan kulku vie myös pisteitä pois.
+
 
 ### Testauskattavuus
 
