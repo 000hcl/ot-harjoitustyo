@@ -1,6 +1,6 @@
 ## tuntikirjanpito
 
-Tunnit: 38 h 15 min
+Tunnit: 39 h 5 min
 
 | päivä | aika | mitä? |
 | :----:|:-----| :-----|
@@ -35,3 +35,4 @@ Tunnit: 38 h 15 min
 | | 30 min | käyttöohje |
 | | 5 min | vaatimusmäärittelyn päivitys |
 | | 20 min | testidokumentti |
+| | 50 min | arkkitehtuurikuvauksen päivitys |
