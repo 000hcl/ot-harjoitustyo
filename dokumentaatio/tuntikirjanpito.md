@@ -1,6 +1,6 @@
 ## tuntikirjanpito
 
-Tunnit: 37 h 50 min
+Tunnit: 37 h 55 min
 
 | päivä | aika | mitä? |
 | :----:|:-----| :-----|
@@ -33,3 +33,4 @@ Tunnit: 37 h 50 min
 | | 20 min | Uudelleen järjestely, testaus virtuaalityöasemalla |
 | 16.5 | 10 min | Lint |
 | | 30 min | käyttöohje |
+| | 5 min | vaatimusmäärittelyn päivitys |
