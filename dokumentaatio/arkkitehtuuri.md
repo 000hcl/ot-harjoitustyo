@@ -30,7 +30,7 @@ Pelissä on mukana Timer-luokka joka mittaa kuinka paljon aikaa on mennyt peliin
 
 ## Luokkakaavio
 
-![luokkakaavio](./kuvat/luokkakaavio.png)
+![luokkakaavio](./kuvat/lk.png)
 
 ---
 
