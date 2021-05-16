@@ -2,6 +2,8 @@
 
 Sovelluksen automatisoituun testaamiseen on käytetty unittest. Kaikki paitsi käyttöliittymän luokat ovat testattu tällä tavalla. Sovellusta on myös testattu manuaalisesti. 
 
+## Automatisoidut testit
+
 ### Tulostaulun testaus
 
 Tulostaulun testit luovat tiedostoja jotka vastaavat kelvollisia ja epäkelvollisia totuustauluja, ja testaa näillä Save-luokkaa. Näin oikeaa ohjelman käyttämä totuustaulu ei muutu.
