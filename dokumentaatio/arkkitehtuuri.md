@@ -1,4 +1,4 @@
-# Arkkitehtuuri (tällä hetkellä)
+# Arkkitehtuuri
 
 ## Pakkausrakenne
 
