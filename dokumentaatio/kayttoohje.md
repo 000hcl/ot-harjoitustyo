@@ -1,14 +1,24 @@
 # Käyttöohje
 
-1. Lataa release. Pura zip.
+## Asentaminen ja suorittaminen:
 
-2. Suorita komentorivillä: 
+Tarvitset:
+
+- pythonin versio 3.6 (tai uudempi)
+- poetry
+
+
+1. [Lataa viimeisin release](https://github.com/000hcl/ot-harjoitustyo/releases/tag/loppupalautus)
+2. Pura zip haluamaasi paikkaan.
+3. siirry komentorivillä purattuun kansioon.
+
+4. Suorita komentorivillä: 
 
 ```bash
 poetry install 
 ```
 
-3. Käynnistä ohjelma komennolla: 
+5. Käynnistä ohjelma komennolla: 
 
 ``` bash
 poetry run invoke start
