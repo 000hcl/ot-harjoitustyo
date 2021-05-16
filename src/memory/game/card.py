@@ -27,12 +27,13 @@ class Card:
             y: The y-coordinate for the top-left corner.
         """
         self.__face = pygame.image.load(os.path.join(dir_name, "..", "..",
-         "assets", "card_" + str(number) + ".png"))
-        self.__back = pygame.image.load(os.path.join(dir_name, "..", "..", "assets", "card_back.png"))
+        "assets", "card_" + str(number) + ".png"))
+        self.__back = pygame.image.load(os.path.join(dir_name, "..", "..", "assets",
+        "card_back.png"))
         self.__img = self.__back
         self.__shown = False
-        self.__x = x
-        self.__y = y
+        self.__x = x # pylint: disable=invalid-name
+        self.__y = y # pylint: disable=invalid-name
         self.__number = number
 
     def flip(self):
@@ -64,7 +65,7 @@ class Card:
         return self.__shown
 
     @property
-    def x(self):
+    def x(self): # pylint: disable=invalid-name
         """
         Returns x-coordinate of the top-left corner.
         """
@@ -78,7 +79,7 @@ class Card:
         return self.__x + 80
 
     @property
-    def y(self):
+    def y(self): # pylint: disable=invalid-name
         """
         Returns y-coordinate of the top-left corner.
         """

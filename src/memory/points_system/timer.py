@@ -20,7 +20,7 @@ class Timer:
 
     def end_timer(self):
         """
-        Stops the timer. 
+        Stops the timer.
         Sets the end attribute as the current time.
         """
         self.__end = ceil(perf_counter())

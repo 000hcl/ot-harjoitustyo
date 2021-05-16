@@ -32,7 +32,7 @@ class Save:
     def update(self, number):
         """
         Adds a new number to the leaderboard and updates the file.
-        
+
         Args:
             number: A new result to be added to the leaderboard.
         """
@@ -41,10 +41,10 @@ class Save:
         if number < 0 or number > 105000:
             return
         self.__result.append(number)
-        self.__result.sort(reverse = True)
+        self.__result.sort(reverse=True)
         new_result = []
-        for number in range(10):
-            new_result.append(self.__result[number])
+        for num in range(10):
+            new_result.append(self.__result[num])
         self.__result = new_result
         self.__write_save_file(self.__result)
 

@@ -32,7 +32,7 @@ class Level:
         """
         return self.__deck
 
-    def __find_clicked_card(self, x, y):
+    def __find_clicked_card(self, x, y): # pylint: disable=invalid-name
         """If a mouse button was clicked, find the card that collides
         with the position of the mouse.
 
@@ -49,7 +49,7 @@ class Level:
             c_x_2 = card.x_2
             c_y = card.y
             c_y_2 = card.y_2
-            if x >= c_x1 and x<=c_x_2 and y>=c_y and y<=c_y_2:
+            if c_x_2 >= x >= c_x1 and c_y_2 >= y >= c_y:
                 return card
         return None
 
