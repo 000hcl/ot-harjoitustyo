@@ -9,7 +9,6 @@ class Level:
         deck: The deck used in the game.
         first_card: The first card flipped over when finding a new pair.
         second_card: The second card flipped over when finding a new pair.
-        pairs: The number of pairs made.
         points: The point calculating system.
     """
     def __init__(self, mode):
@@ -22,7 +21,6 @@ class Level:
         self.__deck = Deck(mode).deck
         self.__first_card = None
         self.__second_card = None
-        self.__pairs = 0
         self.__points = Points(mode)
 
     @property
@@ -82,14 +80,6 @@ class Level:
             self.__first_card = card
             self.__second_card = None
 
-    def __check_if_matching(self):
-        """
-        checks if the memorized pair are a matching pair.
-        Increases the number of found pairs by one if they match.
-        """
-        if self.__first_card is not None and self.__second_card is not None:
-            if self.__first_card.number == self.__second_card.number:
-                self.__pairs += 1
 
     def __reset_pair(self):
         """
@@ -140,5 +130,4 @@ class Level:
             self.__flip_or_delete_pair()
             card.flip()
             self.__set_flipped_pair(card)
-            self.__check_if_matching()
             self.__increase_points()
