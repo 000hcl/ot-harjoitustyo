@@ -16,15 +16,13 @@ points_system: Pisteiden laskeminen.
 
 ## Käyttöliittymä
 
-Käyttöliittymä voi näyttää pelin, päävalikko, ja "vaikeustaso" valikko. Valikot ovat molemmat Menu luokkia. Pelin näyttämiseen käyttöliittymä tarvitsee Level-luokan tiedot.
-
-(Tällä hetkellä käyttöliittymän rakenne on todella outo, enkä tiedä jos aika riittää sen korjaamiseen.)
+Käyttöliittymä voi näyttää pelin, päävalikko, ja "vaikeustaso" valikko. Valikot ovat molemmat Menu luokkia. Pelin näyttämiseen käyttöliittymä tarvitsee Level-luokan tiedot. Luokka LevelService on ainoa luokka joka kommunikoi Level-luokan ja muiden käyttöliittymän luokkien kanssa, ja muut käyttöliittymä-luokat kommunikoi tarvittaessa ainoastaan tämän kanssa Level-luokan sijaan.
 
 ## Pelin logiikka
 
 ### Peli
 
-Kun käyttäjä painaa hiirennappia kutsutaan Level-luokan click_event-metodia. Ensin tutkitaan jos hiiren koordinaatit osuvat johonkin korttiin. Sitten tehdään tarvittavat toiminnot.
+Kun käyttäjä painaa hiirennappia kutsutaan Level-luokan click_event-metodia. Ensin tutkitaan jos hiiren koordinaatit osuvat johonkin korttiin. Sitten tehdään tarvittavat toiminnot. 
 
 ### Pisteet
 
@@ -37,6 +35,7 @@ Pelissä on mukana Timer-luokka joka mittaa kuinka paljon aikaa on mennyt peliin
 ---
 
 ## Sekvenssikaavio, Level-luokan click_event():
+
 
 ![sekvenssikaavio](./kuvat/sekvenssikaavio.png)
 
