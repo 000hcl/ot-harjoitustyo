@@ -18,7 +18,7 @@ Tarvitset:
 - pythonin versio 3.6 (tai uudempi)
 - poetry
 
-1. [Lataa viimeisin release](https://github.com/000hcl/ot-harjoitustyo/releases/tag/loppupalautus)
+1. [Lataa viimeisin release](https://github.com/000hcl/ot-harjoitustyo/releases/tag/loppupalautus) (Huom! Käyttöohje, README, ja tuntikirjanpito eivät ole ajan tasalla tässä releasissä!)
 2. Pura zip haluamaasi paikkaan.
 3. siirry komentorivillä purattuun kansioon.
 4. Käynnistä ohjelma seuraamalla seuraavat ohjeet:
