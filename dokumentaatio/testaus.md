@@ -19,7 +19,7 @@ Level-luokan testit jotka testaavat pisteiden laskua eivät aina mene läpi jos 
 
 Haarautumiskattavuus on 91%.
 
-![covreport](./kuvat/covreport.png)
+![covreport](./kuvat/covrep.png)
 
 ## Järjestelmätestaus
 
